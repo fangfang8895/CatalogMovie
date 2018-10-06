@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Catalogue Movie</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Catalogue Movie</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="upcoming_movies">Upcoming Movies</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+
+    <string name="test_now">Now Playing</string>
+    <string name="detail">Detail</string>
+    <string name="masukan_nama_film">Write your movie title</string>
+    <string name="Cari">Search</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="language">Language</string>
+    <string name="popularity">Popularity</string>
+    <string name="vote_average">Vote Average</string>
+    <string name="date_released">Date Released</string>
+    <string name="favorit_item">Favorite</string>
+    <string name="add_as_favourite">Add as favourite film?</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
