@@ -25,9 +25,6 @@ public class FavoriteHelper {
         return(this);
     }
 
-    public void close(){
-        databaseHelper.close();
-    }
 
     /*public ArrayList<FavoriteItems> query(){
         ArrayList<FavoriteItems> arrayList = new ArrayList<FavoriteItems>();

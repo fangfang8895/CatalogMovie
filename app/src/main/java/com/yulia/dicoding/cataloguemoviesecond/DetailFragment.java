@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +37,7 @@ public class DetailFragment extends Fragment implements View.OnClickListener{
     @BindView(R.id.img_movie_detail)
     ImageView imgMovieDetail;
     @BindView(R.id.button_favorit)
-    Button btnFavorite;
+    ImageView btnFavorite;
 
     public static String EXTRA_ID = "extra_id";
     public static String EXTRA_IMG = "extra_image";
@@ -115,8 +114,7 @@ public class DetailFragment extends Fragment implements View.OnClickListener{
 
             mContext.getContentResolver().insert(CONTENT_URI, cv);
             getActivity().setResult(RESULT_ADD);
-            Toast.makeText(getActivity(), R.string.add_as_favourite, Toast.LENGTH_SHORT).show();
-            btnFavorite.setText("Favorited");
+            Toast.makeText(getActivity(), R.string.add_as_favourite_success, Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -11,7 +11,6 @@ import static com.yulia.dicoding.cataloguemoviesecond.db.DatabaseContract.Favori
 import static com.yulia.dicoding.cataloguemoviesecond.db.DatabaseContract.FavoriteColumns.RELEASE_DATE;
 import static com.yulia.dicoding.cataloguemoviesecond.db.DatabaseContract.FavoriteColumns.TITLE;
 import static com.yulia.dicoding.cataloguemoviesecond.db.DatabaseContract.FavoriteColumns.VOTE;
-import static com.yulia.dicoding.cataloguemoviesecond.db.DatabaseContract.FavoriteColumns._ID;
 import static com.yulia.dicoding.cataloguemoviesecond.db.DatabaseContract.TABLE_NAME;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -29,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     + " %s TEXT NOT NULL,"
                     + " %s TEXT NOT NULL)",
             DatabaseContract.TABLE_NAME,
-            _ID,
+            DatabaseContract.FavoriteColumns._ID,
             TITLE,
             POSTERPATH,
             OVERVIEW,

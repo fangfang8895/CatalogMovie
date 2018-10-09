@@ -97,6 +97,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             public void onClick(View v) {
                 Fragment fragment = new DetailFragment();
                 Bundle bundle = new Bundle();
+                bundle.putInt(DetailFragment.EXTRA_ID, mData.get(position).getId());
                 bundle.putString(DetailFragment.EXTRA_TITLE, mData.get(position).getTitle());
                 bundle.putString(DetailFragment.EXTRA_DATE, mData.get(position).getReleaseDate());
                 bundle.putString(DetailFragment.EXTRA_ABOUT, mData.get(position).getOverview());

@@ -88,11 +88,17 @@
                     android:id="@+id/tv_lang_movie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
-                <Button
+                <TextView
+                    android:id="@+id/tv_fav_movie"
                     android:layout_width="wrap_content"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
-                    android:text="@string/add_as_favourite"
+                    android:text="@string/add_as_favourite"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:background="@android:color/transparent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_favorit"
                     android:id="@+id/button_favorit"
                     android:textSize="10sp"
                     android:clickable="true"/>
