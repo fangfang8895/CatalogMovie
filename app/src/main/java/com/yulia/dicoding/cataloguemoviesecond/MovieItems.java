@@ -98,5 +98,6 @@ public class MovieItems extends ArrayList {
         this.language = language;
     }
 
+
 }
 

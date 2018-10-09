@@ -1,6 +1,8 @@
 package com.yulia.dicoding.cataloguemoviesecond;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
@@ -27,8 +29,8 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     ActionBarDrawerToggle toggle;
-
-
+    private Cursor list;
+    public static Context contextOfApplication;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         if(actionBar != null){
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
+        contextOfApplication = getApplicationContext();
 
         navigationView.setNavigationItemSelectedListener(this);
         
@@ -55,8 +57,14 @@ public class MainActivity extends AppCompatActivity
        }
 
 
+
     }
 
+
+    public static Context getContextOfApplication()
+    {
+        return contextOfApplication;
+    }
 
         @Override
         public void onBackPressed () {
@@ -94,6 +102,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
+
     @Override
     public boolean onNavigationItemSelected(@Nullable  MenuItem item) {
         switch (item.getItemId()){
@@ -126,6 +135,7 @@ public class MainActivity extends AppCompatActivity
 
      
     }
+
 
 
 }
