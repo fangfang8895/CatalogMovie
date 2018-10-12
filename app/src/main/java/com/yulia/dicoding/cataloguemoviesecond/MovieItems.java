@@ -1,10 +1,13 @@
 package com.yulia.dicoding.cataloguemoviesecond;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class MovieItems extends ArrayList {
+public class MovieItems extends ArrayList implements Parcelable {
     private int id;
     private String posterPath;
     private String popularityMovie;
@@ -99,5 +102,44 @@ public class MovieItems extends ArrayList {
     }
 
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.id);
+        dest.writeString(this.posterPath);
+        dest.writeString(this.popularityMovie);
+        dest.writeString(this.overview);
+        dest.writeString(this.releaseDate);
+        dest.writeString(this.voteAveragedetail);
+        dest.writeString(this.title);
+        dest.writeString(this.language);
+    }
+
+    protected MovieItems(Parcel in) {
+        this.id = in.readInt();
+        this.posterPath = in.readString();
+        this.popularityMovie = in.readString();
+        this.overview = in.readString();
+        this.releaseDate = in.readString();
+        this.voteAveragedetail = in.readString();
+        this.title = in.readString();
+        this.language = in.readString();
+    }
+
+    public static final Parcelable.Creator<MovieItems> CREATOR = new Parcelable.Creator<MovieItems>() {
+        @Override
+        public MovieItems createFromParcel(Parcel source) {
+            return new MovieItems(source);
+        }
+
+        @Override
+        public MovieItems[] newArray(int size) {
+            return new MovieItems[size];
+        }
+    };
 }
 

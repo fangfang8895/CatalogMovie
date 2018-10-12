@@ -33,6 +33,13 @@ public class FavoriteFragment extends Fragment implements View.OnClickListener {
     public FavoriteFragment() {
         // Required empty public constructor
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // keep the fragment and all its data across screen rotation
+        setRetainInstance(true);
+
+    }
 
 
     @Override

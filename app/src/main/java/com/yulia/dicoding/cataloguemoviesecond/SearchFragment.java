@@ -36,7 +36,13 @@ public class SearchFragment extends Fragment implements LoaderManager.LoaderCall
     public SearchFragment() {
         // Required empty public constructor
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // keep the fragment and all its data across screen rotation
+        setRetainInstance(true);
 
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

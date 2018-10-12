@@ -52,10 +52,6 @@ public class DetailFragment extends Fragment implements View.OnClickListener{
     public static int RESULT_DELETE = 301;
 
     private Context mContext;
-    /*private FavoriteHelper favoriteHelper;
-    private boolean isFavorite = false;
-    private int favorite;*/
-
     public DetailFragment() {
         // Required empty public constructor
     }
@@ -89,13 +85,6 @@ public class DetailFragment extends Fragment implements View.OnClickListener{
 
     }
 
-
-  /*  private void FavoriteRemove(){
-
-        mContext.getContentResolver().delete(getArguments().getInt(EXTRA_ID), null,null);
-        getActivity().setResult(RESULT_DELETE, null);
-        Toast.makeText(getActivity(), R.string.remove_favourite, Toast.LENGTH_SHORT).show();
-    }*/
 
 
 

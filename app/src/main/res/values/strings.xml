@@ -25,5 +25,8 @@
     <string name="remove_favourite">Remove from favourite film</string>
     <string name="add_as_favourite_success">Add as favourite, Success!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appwidget_text">Favorite Film Widget</string>
+    <string name="add_widget">Add widget</string>
+    <string name="empty_text">NO DATA</string>
 
 </resources>

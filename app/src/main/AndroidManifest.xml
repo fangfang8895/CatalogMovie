@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yulia.dicoding.cataloguemoviesecond">
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <permission android:name="com.yulia.dicoding.cataloguemoviesecond.READ_DATABASE"
-        android:protectionLevel="normal"/>
-    <permission android:name="com.yulia.dicoding.cataloguemoviesecond.WRITE_DATABASE"
-        android:protectionLevel="normal"/>
+
+    <permission
+        android:name="com.yulia.dicoding.cataloguemoviesecond.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.yulia.dicoding.cataloguemoviesecond.WRITE_DATABASE"
+        android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
@@ -24,12 +28,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
-            android:authorities="com.yulia.dicoding.cataloguemoviesecond"
             android:name=".provider.FavoriteProvider"
+            android:authorities="com.yulia.dicoding.cataloguemoviesecond"
             android:exported="true"
             android:readPermission="com.yulia.dicoding.cataloguemoviesecond.READ_DATABASE"
-            android:writePermission="com.yulia.dicoding.cataloguemoviesecond.WRITE_DATABASE"/>
+            android:writePermission="com.yulia.dicoding.cataloguemoviesecond.WRITE_DATABASE" />
+
+        <receiver android:name=".Widget.FavoriteWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_widget_info" />
+        </receiver>
+        <service android:name=".Widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" >
+
+        </service>
     </application>
 
 </manifest>

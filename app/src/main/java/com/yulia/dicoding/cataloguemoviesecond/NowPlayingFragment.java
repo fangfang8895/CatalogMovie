@@ -32,12 +32,19 @@ public class NowPlayingFragment extends Fragment implements LoaderManager.Loader
 
     @BindView(R.id.rv_nowplay)
     RecyclerView rvNowPlay;
+
     public static final String EXTRA_NOW_PLAY = "EXTRA_NOW";
 
     public NowPlayingFragment() {
         // Required empty public constructor
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // keep the fragment and all its data across screen rotation
+        setRetainInstance(true);
 
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

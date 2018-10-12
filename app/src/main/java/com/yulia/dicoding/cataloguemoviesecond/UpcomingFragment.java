@@ -38,6 +38,13 @@ public class UpcomingFragment extends Fragment implements LoaderManager.LoaderCa
     public UpcomingFragment() {
         // Required empty public constructor
 }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // keep the fragment and all its data across screen rotation
+        setRetainInstance(true);
+
+    }
 
 
     @Override
@@ -45,6 +52,7 @@ public class UpcomingFragment extends Fragment implements LoaderManager.LoaderCa
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_upcoming, container, false);
         ButterKnife.bind(this, rootView);
+
 
         adapter = new MovieAdapter(getContext());
         adapter.notifyDataSetChanged();
