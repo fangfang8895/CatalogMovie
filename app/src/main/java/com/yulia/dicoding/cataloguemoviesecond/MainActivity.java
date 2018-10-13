@@ -16,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.yulia.dicoding.cataloguemoviesecond.SettingReminder.SettingActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -125,6 +127,10 @@ public class MainActivity extends AppCompatActivity
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FavoriteFragment()).commit();
                 getSupportActionBar().setTitle(R.string.favorit_item);
                 break;
+
+            case R.id.nav_setting:
+                Intent mIntent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(mIntent);
 
                 
         }

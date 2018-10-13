@@ -3,7 +3,8 @@
     package="com.yulia.dicoding.cataloguemoviesecond">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <permission
         android:name="com.yulia.dicoding.cataloguemoviesecond.READ_DATABASE"
         android:protectionLevel="normal" />
@@ -36,6 +37,14 @@
             android:readPermission="com.yulia.dicoding.cataloguemoviesecond.READ_DATABASE"
             android:writePermission="com.yulia.dicoding.cataloguemoviesecond.WRITE_DATABASE" />
 
+        <receiver
+            android:name=".reminder.DailyReminder"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name=".reminder.UpcomingAlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
         <receiver android:name=".Widget.FavoriteWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -45,10 +54,12 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/favorite_widget_info" />
         </receiver>
-        <service android:name=".Widget.StackWidgetService"
-            android:permission="android.permission.BIND_REMOTEVIEWS" >
 
-        </service>
+        <service
+            android:name=".Widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+
+        <activity android:name=".SettingReminder.SettingActivity"></activity>
     </application>
 
 </manifest>

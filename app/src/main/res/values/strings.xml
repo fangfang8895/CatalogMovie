@@ -28,5 +28,15 @@
     <string name="appwidget_text">Favorite Film Widget</string>
     <string name="add_widget">Add widget</string>
     <string name="empty_text">NO DATA</string>
+    <string name="setting_reminder">Setting Reminder</string>
+    <string name="setting_notification_reminder">Setting Notification Reminder</string>
+    <string name="turn_on_notif_daily">Turn On/Off Notif Daily</string>
+    <string name="turn_on_notif_upcoming">Turn On/Off Upcoming Reminder</string>
+    <string name="daily_reminder">Dicoding Catalogue Movie missing you</string>
+    <string name="activate_daily_reminder">Turn On Daily Reminder</string>
+    <string name="turn_of_daily">Turn Off Daily Reminder</string>
+    <string name="upcoming_reminder">Upcoming Movies Reminder</string>
+    <string name="activate_upcoming_reminder">Turn On Upcoming Reminder</string>
+    <string name="turn_of_upcoming">Turn Of Upcoming Reminder</string>
 
 </resources>
